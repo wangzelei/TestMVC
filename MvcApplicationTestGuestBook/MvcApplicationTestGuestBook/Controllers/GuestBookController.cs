@@ -22,22 +22,9 @@ namespace MvcApplicationTestGuestBook.Controllers
         }
 
         //
-        // GET: /GuestBook/Details/5
+        // GET: /GuestBook/Write
 
-        public ActionResult Details(int id = 0)
-        {
-            Guestbook guestbook = db.Guestbooks.Find(id);
-            if (guestbook == null)
-            {
-                return HttpNotFound();
-            }
-            return View(guestbook);
-        }
-
-        //
-        // GET: /GuestBook/Create
-
-        public ActionResult Create()
+        public ActionResult Write()
         {
             return View();
         }
@@ -46,7 +33,7 @@ namespace MvcApplicationTestGuestBook.Controllers
         // POST: /GuestBook/Create
 
         [HttpPost]
-        public ActionResult Create(Guestbook guestbook)
+        public ActionResult Write(Guestbook guestbook)
         {
             if (ModelState.IsValid)
             {
@@ -56,59 +43,6 @@ namespace MvcApplicationTestGuestBook.Controllers
             }
 
             return View(guestbook);
-        }
-
-        //
-        // GET: /GuestBook/Edit/5
-
-        public ActionResult Edit(int id = 0)
-        {
-            Guestbook guestbook = db.Guestbooks.Find(id);
-            if (guestbook == null)
-            {
-                return HttpNotFound();
-            }
-            return View(guestbook);
-        }
-
-        //
-        // POST: /GuestBook/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(Guestbook guestbook)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(guestbook).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(guestbook);
-        }
-
-        //
-        // GET: /GuestBook/Delete/5
-
-        public ActionResult Delete(int id = 0)
-        {
-            Guestbook guestbook = db.Guestbooks.Find(id);
-            if (guestbook == null)
-            {
-                return HttpNotFound();
-            }
-            return View(guestbook);
-        }
-
-        //
-        // POST: /GuestBook/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Guestbook guestbook = db.Guestbooks.Find(id);
-            db.Guestbooks.Remove(guestbook);
-            db.SaveChanges();
-            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

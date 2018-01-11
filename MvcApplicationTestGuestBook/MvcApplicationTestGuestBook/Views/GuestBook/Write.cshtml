@@ -1,10 +1,10 @@
 ﻿@model MvcApplicationTestGuestBook.Models.Guestbook
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "留下足迹";
 }
 
-<h2>Create</h2>
+<h2>留下足迹</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
@@ -37,13 +37,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="提交" />
         </p>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("回到列表", "Index")
 </div>
 
 @section Scripts {

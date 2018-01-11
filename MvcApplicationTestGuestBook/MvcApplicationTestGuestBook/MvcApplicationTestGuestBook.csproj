@@ -285,10 +285,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\GuestBook\Index.cshtml" />
-    <Content Include="Views\GuestBook\Details.cshtml" />
-    <Content Include="Views\GuestBook\Create.cshtml" />
-    <Content Include="Views\GuestBook\Edit.cshtml" />
-    <Content Include="Views\GuestBook\Delete.cshtml" />
+    <Content Include="Views\GuestBook\Write.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
